@@ -1,0 +1,146 @@
+:root {
+  /* ===== Light: Pastel Boutique (IMPROVED) ===== */
+  --color-bg: #FBFAFF;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFFFF;
+
+  /* ✅ Light sidebar must be LIGHT */
+  --color-sidebar: #FFFFFF;
+--color-sidebar-hover: #EEE7FF;
+
+  --color-primary: #8B5CF6;
+  --color-primary-hover: #7C3AED;
+--color-primary-light: #F3EDFF;
+  --color-primary-dark: #5B21B6;
+
+  --color-secondary: #FB7185;
+  --color-secondary-hover: #F43F5E;
+  --color-secondary-light: #FFE4E8;
+
+  --color-accent: #FDBA74;
+  --color-accent-light: #FFF1E5;
+
+  --color-text-primary: #17112B;
+  --color-text-secondary: #6B637A;
+  --color-text-tertiary: #A8A1B6;
+  --color-text-on-primary: #FFFFFF;
+
+  /* ✅ sidebar text in light mode should be DARK */
+  --color-text-sidebar: #17112B;
+
+  --color-success: #22C55E;
+  --color-success-light: #DCFCE7;
+  --color-warning: #F59E0B;
+  --color-warning-light: #FEF3C7;
+  --color-error: #EF4444;
+  --color-error-light: #FEE2E2;
+  --color-info: #38BDF8;
+  --color-info-light: #E0F2FE;
+
+  /* ✅ borders look clean in light mode */
+  --color-border: #E7E2F4;
+  --color-divider: #F2EEFF;
+  --color-input-border: #D5CCE8;
+  --color-input-focus: #8B5CF6;
+
+  --shadow-xs: 0 1px 2px rgba(23, 17, 43, 0.06);
+  --shadow-sm: 0 2px 10px rgba(23, 17, 43, 0.08);
+  --shadow-md: 0 12px 26px rgba(23, 17, 43, 0.10);
+  --shadow-lg: 0 18px 46px rgba(23, 17, 43, 0.12);
+  --shadow-xl: 0 30px 86px rgba(23, 17, 43, 0.14);
+  --shadow-primary: 0 14px 34px rgba(139, 92, 246, 0.22);
+
+  --border-radius-sm: 10px;
+  --border-radius: 14px;
+  --border-radius-lg: 18px;
+  --border-radius-xl: 22px;
+  --transition-speed: 0.2s;
+  --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  /* ===== Dark: Pastel Night ===== */
+  --color-bg: #0F0B1E;
+  --color-surface: #151028;
+  --color-surface-elevated: #1C1533;
+
+  /* ✅ Dark sidebar stays DARK */
+  --color-sidebar: #120C24;
+--color-sidebar-hover: #1A1230;
+
+  --color-primary: #C4B5FD;
+  --color-primary-hover: #DDD6FE;
+--color-primary-light: #1C1633;
+  --color-primary-dark: #A78BFA;
+
+  --color-secondary: #FDA4AF;
+  --color-secondary-hover: #FEB3BC;
+  --color-secondary-light: #2A141A;
+
+  --color-accent: #FED7AA;
+  --color-accent-light: #231A12;
+
+  --color-text-primary: #F4F1FF;
+  --color-text-secondary: #C7BEDA;
+  --color-text-tertiary: #867E9E;
+  --color-text-on-primary: #0F0B1E;
+
+  /* ✅ sidebar text in dark mode should be LIGHT */
+  --color-text-sidebar: #EDE7FF;
+
+  --color-success: #34D399;
+  --color-success-light: #0F2A1C;
+  --color-warning: #FBBF24;
+  --color-warning-light: #2A220F;
+  --color-error: #FB7185;
+  --color-error-light: #2B1214;
+  --color-info: #7DD3FC;
+  --color-info-light: #0B2030;
+
+  --color-border: #2B2441;
+  --color-divider: #221A38;
+  --color-input-border: #3A2F56;
+  --color-input-focus: #C4B5FD;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.40);
+  --shadow-md: 0 12px 28px rgba(0, 0, 0, 0.50);
+  --shadow-lg: 0 22px 52px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0 34px 90px rgba(0, 0, 0, 0.60);
+  --shadow-primary: 0 18px 44px rgba(196, 181, 253, 0.18);
+}
+
+
+html, body {
+  height: 100%;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+/* Smooth fonts */
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+/* Global scrollbars */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.25);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.45);
+  background-clip: content-box;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.35) transparent;
+}

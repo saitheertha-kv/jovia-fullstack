@@ -1,0 +1,95 @@
+.footer{
+  width:100%;
+  margin-top:60px;
+
+  border-top:1px solid var(--color-border);
+
+  background:
+  linear-gradient(
+    180deg,
+    var(--color-surface),
+    var(--color-surface-elevated)
+  );
+
+  backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+}
+
+.container{
+  max-width:1400px;
+  margin:auto;
+
+  padding:20px 24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+/* brand section */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logoBox{
+  width:40px;
+  height:40px;
+
+  border-radius:14px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+  linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+  border:1px solid
+  color-mix(in srgb, var(--color-primary) 30%, var(--color-border));
+
+  box-shadow:var(--shadow-primary);
+}
+
+.logoIcon{
+  color:#fff;
+  font-size:20px !important;
+}
+
+.brandText h3{
+  margin:0;
+  font-size:15px;
+  font-weight:900;
+  color:var(--color-text-primary);
+}
+
+.brandText p{
+  margin-top:2px;
+  font-size:12px;
+  font-weight:600;
+  color:var(--color-text-secondary);
+}
+
+/* copyright */
+.copy{
+  font-size:12px;
+  font-weight:600;
+  color:var(--color-text-secondary);
+}
+
+/* responsive */
+@media(max-width:700px){
+
+  .container{
+    flex-direction:column;
+    text-align:center;
+    gap:12px;
+  }
+
+}
