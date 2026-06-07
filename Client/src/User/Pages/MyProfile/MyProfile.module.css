@@ -1,0 +1,260 @@
+.page {
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-text-primary);
+  letter-spacing: 0.3px;
+}
+
+.header p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.profileCard {
+  position: relative;
+  border: 1px solid var(--color-border);
+  border-radius: 28px;
+  padding: 28px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-surface) 96%, transparent),
+    color-mix(in srgb, var(--color-surface-elevated) 98%, transparent)
+  );
+
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+.profileCard::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 140px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-primary-light) 70%, transparent),
+    color-mix(in srgb, var(--color-secondary) 12%, transparent)
+  );
+  pointer-events: none;
+}
+
+.topSection {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.photoWrap {
+  flex-shrink: 0;
+}
+
+.profileImage {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 26px;
+  border: 3px solid color-mix(in srgb, var(--color-surface) 70%, transparent);
+  box-shadow: var(--shadow-primary);
+  background: var(--color-surface-elevated);
+}
+
+.avatarFallback {
+  width: 130px !important;
+  height: 130px !important;
+  font-size: 42px !important;
+  font-weight: 900 !important;
+  border-radius: 26px !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)) !important;
+  box-shadow: var(--shadow-primary) !important;
+}
+
+.topInfo {
+  min-width: 0;
+}
+
+.topInfo h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-text-primary);
+}
+
+.topInfo p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  word-break: break-word;
+}
+
+.roleBadge {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 24%, var(--color-border));
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.infoGrid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.infoCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid var(--color-border);
+
+  background: linear-gradient(
+    180deg,
+    var(--color-surface-elevated),
+    color-mix(in srgb, var(--color-surface-elevated) 84%, var(--color-bg))
+  );
+
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow var(--transition-speed) var(--transition-easing),
+    border-color var(--transition-speed) var(--transition-easing),
+    background var(--transition-speed) var(--transition-easing);
+}
+
+.infoCard:hover {
+  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--color-primary) 24%, var(--color-border));
+  background: var(--color-primary-light);
+}
+
+.infoIcon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+  box-shadow: var(--shadow-primary);
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.2px;
+}
+
+.infoCard h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--color-text-primary);
+  word-break: break-word;
+}
+
+.stateBox {
+  min-height: 320px;
+  border: 1px solid var(--color-border);
+  border-radius: 26px;
+  background: linear-gradient(
+    180deg,
+    var(--color-surface),
+    var(--color-surface-elevated)
+  );
+  box-shadow: var(--shadow-md);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  color: var(--color-text-secondary);
+  font-weight: 700;
+}
+
+.errorBox {
+  color: var(--color-error);
+}
+
+@media (max-width: 900px) {
+  .profileCard {
+    padding: 22px;
+  }
+
+  .topSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profileImage,
+  .avatarFallback {
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+  .topInfo h2 {
+    font-size: 24px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .profileCard {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .infoCard {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .infoIcon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+}
