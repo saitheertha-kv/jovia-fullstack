@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import axios from "axios";
-import style from "./BrandHomepage.module.css";
+import style from "./BrandHomePage.module.css";
 
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
