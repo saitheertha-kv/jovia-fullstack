@@ -21,7 +21,7 @@ import InventoryOutlinedIcon from "@mui/icons-material/InventoryOutlined";
 import PersonSearchIcon from "@mui/icons-material/PersonSearch";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 
-const BrandHomepage = () => {
+const BrandHomePage = () => {
   const navigate = useNavigate();
   const bid = sessionStorage.getItem("bid");
   const brandName = localStorage.getItem("name") || "Brand";
