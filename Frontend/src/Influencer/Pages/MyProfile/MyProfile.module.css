@@ -1,0 +1,229 @@
+.page {
+  padding: 24px;
+  margin-top: 70px;
+}
+
+.header {
+  margin-bottom: 22px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.headerIconWrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  box-shadow: var(--shadow-primary);
+  border: 1px solid
+    color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
+}
+
+.headerIcon {
+  color: #fff;
+  font-size: 26px !important;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-text-primary);
+  letter-spacing: 0.2px;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.profileCard {
+  border: 1px solid var(--color-border);
+  border-radius: 26px;
+  padding: 24px;
+  background: linear-gradient(
+    180deg,
+    var(--color-surface),
+    var(--color-surface-elevated)
+  );
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+.topSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.photoWrap {
+  flex-shrink: 0;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 3px solid
+    color-mix(in srgb, var(--color-primary) 30%, var(--color-border));
+  box-shadow: var(--shadow-primary);
+}
+
+.photoFallback {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: #fff;
+  font-size: 42px;
+  font-weight: 900;
+  box-shadow: var(--shadow-primary);
+}
+
+.topInfo {
+  min-width: 0;
+}
+
+.profileName {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--color-text-primary);
+}
+
+.profileRole {
+  margin: 8px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.infoCard {
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 16px;
+  background: linear-gradient(
+    180deg,
+    var(--color-surface-elevated),
+    color-mix(in srgb, var(--color-surface-elevated) 82%, var(--color-bg))
+  );
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow var(--transition-speed) var(--transition-easing),
+    border-color var(--transition-speed) var(--transition-easing),
+    background var(--transition-speed) var(--transition-easing);
+}
+
+.infoCard:hover {
+  box-shadow: var(--shadow-md);
+  background: var(--color-primary-light);
+  border-color: color-mix(in srgb, var(--color-primary) 28%, var(--color-border));
+}
+
+.infoLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-text-secondary);
+}
+
+.infoValue {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  word-break: break-word;
+}
+
+.socialLink {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.socialLink:hover {
+  text-decoration: underline;
+}
+
+.loadingCard,
+.emptyCard {
+  border: 1px solid var(--color-border);
+  border-radius: 22px;
+  padding: 26px;
+  background: linear-gradient(
+    180deg,
+    var(--color-surface),
+    var(--color-surface-elevated)
+  );
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .topSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .photo,
+  .photoFallback {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+  }
+
+  .photoFallback {
+    font-size: 34px;
+  }
+
+  .profileName {
+    font-size: 22px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
