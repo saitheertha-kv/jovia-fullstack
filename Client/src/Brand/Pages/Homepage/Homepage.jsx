@@ -428,4 +428,4 @@ const BrandHomePage = () => {
   );
 };
 
-export default BrandHomepage;
+export default BrandHomePage;

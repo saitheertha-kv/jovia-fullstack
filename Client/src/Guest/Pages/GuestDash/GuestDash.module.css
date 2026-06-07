@@ -4,12 +4,9 @@
    ══════════════════════════════════════════ */
 
 .page {
-  min-height: 100vh;
-  overflow-x: hidden;
-  background:
-    radial-gradient(circle at top left, color-mix(in srgb, var(--color-primary-light) 45%, transparent), transparent 30%),
-    linear-gradient(180deg, var(--color-bg), var(--color-surface));
-  color: var(--color-text-primary);
+ width: 100%;
+max-width: 100%;
+overflow-x: hidden;
 }
 
 /* ══════════════════════
@@ -72,15 +69,14 @@
 }
 
 .heroOverlay {
-  position: absolute;
-  inset: 0;
   background:
-    linear-gradient(100deg,
-      rgba(0, 0, 0, 0.82) 0%,
-      rgba(0, 0, 0, 0.46) 45%,
-      rgba(0, 0, 0, 0.62) 100%);
+    linear-gradient(
+      100deg,
+      rgba(0,0,0,0.65) 0%,
+      rgba(0,0,0,0.35) 45%,
+      rgba(0,0,0,0.50) 100%
+    );
 }
-
 .heroGlow {
   position: absolute;
   inset: auto auto 12% -10%;
@@ -412,9 +408,9 @@
    SHARED SECTION
    ══════════════════════ */
 .section {
-  width: min(1280px, 100%);
-  margin: 0 auto;
-  padding: 72px 40px;
+  width: 100%;
+  margin: 0;
+  padding: 72px 0;
   box-sizing: border-box;
 }
 
@@ -468,25 +464,8 @@
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  padding-bottom: 6px;
   scrollbar-width: none;
-}
-
-.catScroll::-webkit-scrollbar {
-  display: none;
-}
-
-.catCover {
-  position: relative;
-  flex-shrink: 0;
-  width: 168px;
-  height: 228px;
-  border-radius: 24px;
-  overflow: hidden;
-  cursor: pointer;
-  border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  padding-bottom: 6px;
 }
 
 .catCover:hover {
@@ -1284,10 +1263,12 @@
     display: none;
   }
 
+  
   .section {
-    padding: 56px 24px;
-  }
-
+  width: 100%;
+  padding: 72px 40px;
+  box-sizing: border-box;
+}
   .statsBar {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1385,6 +1366,7 @@
   .sectionHeadFlat {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
 }
 
@@ -1415,9 +1397,13 @@
     width: 100%;
   }
 
-  .section {
-    padding: 46px 18px;
-  }
+  
+    .section {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 72px 40px;
+}
+
 
   .catCover {
     width: 145px;
@@ -1477,4 +1463,28 @@ img.loading {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.25), transparent);
+}
+ .categorySection {
+  width: 100%;
+}
+
+.categorySection .sectionHeadFlat {
+  padding: 0 40px;
+}
+
+.categorySection .catScroll {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.catCover {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  flex-shrink: 0;
+  width: 230px;
+  height: 218px;
 }

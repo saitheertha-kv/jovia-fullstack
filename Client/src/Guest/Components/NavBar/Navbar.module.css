@@ -34,8 +34,7 @@
   padding: 0 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
+  position: relative;
 }
 
 .brandSection {
@@ -43,8 +42,8 @@
   align-items: center;
   gap: 14px;
   min-width: 0;
+  z-index: 2;
 }
-
 .logoWrap {
   width: 50px;
   height: 50px;
@@ -70,24 +69,32 @@
 
 .brandName {
   margin: 0;
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
   color: var(--color-text-primary);
-  letter-spacing: 0.4px;
+  line-height: 1;
 }
 
 .brandSub {
-  margin: 5px 0 0;
-  font-size: 12.5px;
-  font-weight: 600;
+  margin: 4px 0 0;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: var(--color-text-secondary);
+  font-family: "Poppins", sans-serif;
 }
 
 .menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 18px;
 }
 
 .link,
@@ -97,39 +104,52 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 44px;
-  padding: 0 16px;
-  border-radius: 16px;
-  border: 1px solid transparent;
-  background: transparent;
+
+  min-height: 48px;
+  padding: 0 22px;
+
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+
   color: var(--color-text-primary);
   text-decoration: none;
-  font-size: 13px;
-  font-weight: 800;
-  cursor: pointer;
-  transition:
-    background var(--transition-speed) var(--transition-easing),
-    border-color var(--transition-speed) var(--transition-easing),
-    box-shadow var(--transition-speed) var(--transition-easing),
-    transform var(--transition-speed) var(--transition-easing);
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  transition: all 0.3s ease;
+
 }
 
-.link:hover,
-.themeBtn:hover {
-  background: var(--color-primary-light);
-  border-color: color-mix(in srgb, var(--color-primary) 24%, var(--color-border));
-  box-shadow: var(--shadow-sm);
+
+.link:hover {
+  transform: translateY(-2px);
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #ec4899
+  );
+
+  color: white;
+  box-shadow: 0 8px 24px rgba(139,92,246,0.3);
 }
 
 .active {
   background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--color-primary-light) 88%, var(--color-surface-elevated)),
-    color-mix(in srgb, var(--color-primary-light) 60%, var(--color-surface))
+    135deg,
+    #8b5cf6,
+    #ec4899
   );
-  border-color: color-mix(in srgb, var(--color-primary) 30%, var(--color-border));
-  box-shadow: var(--shadow-sm);
-  color: var(--color-primary);
+
+  color: white;
+  border: none;
+
+  box-shadow: 0 8px 24px rgba(139,92,246,0.35);
 }
 
 .dropdown {
@@ -223,7 +243,11 @@
     min-height: 42px;
     padding: 0 14px;
     font-size: 12px;
+    
   }
+  .link svg {
+  font-size: 18px !important;
+}
 
   .dropdownMenu {
     left: 50%;

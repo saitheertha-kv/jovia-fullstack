@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
-import style from "./Navbar.module.css";
+import style from "./NavBar.module.css";
 import photo from "/logo3.png";
 
 import LoginIcon from "@mui/icons-material/Login";
@@ -12,6 +12,7 @@ import CampaignIcon from "@mui/icons-material/Campaign";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+
 
 import { useTheme } from "../../../context/ThemeContext";
 

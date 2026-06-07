@@ -22,11 +22,10 @@ import style from "./GuestDash.module.css";
 
 /* ── PREMIUM IMAGE SET ── */
 const HERO_BG =
-  "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=2400&q=90&dpr=2";
-
+  "https://images.openai.com/static-rsc-4/j5-PwvCtAg2KPxqcgQlJrvAmocYvBQL71XUVdnonRvfVnVVkw9HslzrOEHtDqzcKoMJrTPd_tEYg_3f2eF9aswvnICyYoeUNjstPucTOh4YrBRhkwGYEr1GF1PqxS_dPGPFk_tN2qJLaXIH8WwNU51E90bcmDBMGmr8z_vNUL9dB84CqntKGHAfg-5gXkAkz?purpose=fullsize"
 const HERO_PORTRAIT =
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1400&q=90&dpr=2";
-
+ "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=90&dpr=2"
+ 
 const PRODUCT_IMAGES = [
   "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1400&q=90&dpr=2",
   "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1400&q=90&dpr=2",
@@ -422,7 +421,8 @@ const GuestDash = () => {
       </div>
 
       {/* Categories */}
-      <section className={style.section}>
+      {/* Categories */}
+<section className={`${style.section} ${style.categorySection}`}>
         <div className={style.sectionHeadFlat}>
           <div>
             <p className={style.sectionEyebrow}>Explore</p>
