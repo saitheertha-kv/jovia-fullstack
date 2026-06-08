@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
-import style from "./NavBar.module.css";
+import style from "./Navbar.module.css";
 import photo from "/logo3.png";
 
 import LoginIcon from "@mui/icons-material/Login";
