@@ -63,9 +63,10 @@ overflow-x: hidden;
   position: absolute;
   inset: -8%;
   background-size: cover;
-  background-position: center center;
+  background-position: center right;
   filter: saturate(1.05) contrast(1.02);
   will-change: transform;
+   background-position: center right;
 }
 
 .heroOverlay {
@@ -128,6 +129,7 @@ overflow-x: hidden;
   font-weight: 500;
   letter-spacing: -2px;
   color: #0a0a0a;
+   max-width: 700px;
 }
 
 .heroTitle em,
@@ -1479,4 +1481,34 @@ img.loading {
   flex-shrink: 0;
   width: 230px;
   height: 218px;
+}
+@media (max-width: 768px) {
+  .heroInner {
+    flex-direction: column;
+    padding: 120px 20px 60px;
+  }
+
+  .heroLeft,
+  .heroRight {
+    width: 100%;
+  }
+
+  .heroTitle {
+    font-size: 3.5rem;
+    line-height: 0.95;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .heroPortraitWrap {
+    margin-top: 30px;
+    transform: scale(0.9);
+  }
+
+  .trustText {
+    font-size: 14px;
+  }
 }

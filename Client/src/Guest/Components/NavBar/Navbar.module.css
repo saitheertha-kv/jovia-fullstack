@@ -219,18 +219,16 @@
 }
 
 @media (max-width: 768px) {
+
   .navbarContainer {
-    padding: 12px 14px;
-    min-height: auto;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    min-height: auto;
   }
 
   .brandSection {
-    justify-content: center;
-  }
-
-  .menu {
     justify-content: center;
   }
 
@@ -238,16 +236,39 @@
     display: none;
   }
 
+  .menu {
+    position: static;
+    left: auto;
+    transform: none;
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
   .link,
   .themeBtn {
     min-height: 42px;
     padding: 0 14px;
     font-size: 12px;
-    
   }
+
   .link svg {
-  font-size: 18px !important;
-}
+    font-size: 18px !important;
+  }
+
+  .brandName {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .logoWrap {
+    width: 42px;
+    height: 42px;
+  }
 
   .dropdownMenu {
     left: 50%;
