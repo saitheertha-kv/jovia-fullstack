@@ -1485,30 +1485,39 @@ img.loading {
 @media (max-width: 768px) {
   .heroInner {
     flex-direction: column;
-    padding: 120px 20px 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
   }
 
-  .heroLeft,
-  .heroRight {
+  .heroLeft {
     width: 100%;
+    max-width: 100%;
+    z-index: 2;
   }
 
   .heroTitle {
-    font-size: 3.5rem;
-    line-height: 0.95;
+    font-size: 2.8rem;
+    line-height: 1;
+    margin-bottom: 16px;
   }
 
   .heroSubtitle {
     font-size: 1rem;
     max-width: 100%;
+    margin: 0 auto;
   }
 
-  .heroPortraitWrap {
-    margin-top: 30px;
-    transform: scale(0.9);
+  .heroRight {
+    display: none;
+  }
+
+  .heroTrust {
+    justify-content: center;
   }
 
   .trustText {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
