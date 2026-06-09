@@ -1483,23 +1483,22 @@ img.loading {
   height: 218px;
 }
 @media (max-width: 768px) {
+
   .heroInner {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr;
     padding: 60px 20px;
     text-align: center;
+    gap: 20px;
   }
 
   .heroLeft {
     width: 100%;
     max-width: 100%;
-    z-index: 2;
   }
 
   .heroTitle {
-    font-size: 2.8rem;
-    line-height: 1;
+    font-size: 2.5rem;
+    line-height: 1.1;
     margin-bottom: 16px;
   }
 
@@ -1514,6 +1513,11 @@ img.loading {
   }
 
   .heroTrust {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .heroCta {
     justify-content: center;
   }
 
