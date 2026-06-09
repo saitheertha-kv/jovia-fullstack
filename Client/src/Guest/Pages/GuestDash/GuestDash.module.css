@@ -21,7 +21,7 @@ overflow-x: hidden;
   overflow: hidden;
   display: flex;
   align-items: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(7, 6, 6, 0.12);
 }
 
 .tickerTrack {
@@ -108,21 +108,11 @@ overflow-x: hidden;
 }
 
 .heroBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 38px;
-  padding: 0 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  backdrop-filter: blur(12px);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 900;
+   font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  font-family: "Inter", sans-serif;
 }
 
 .heroBadge svg {
@@ -131,12 +121,13 @@ overflow-x: hidden;
 }
 
 .heroTitle {
-  margin: 20px 0 18px;
-  font-size: clamp(46px, 7vw, 82px);
-  line-height: 0.95;
-  letter-spacing: -2.8px;
-  font-weight: 950;
-  color: #fff;
+    margin: 24px 0 20px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(64px, 8vw, 110px);
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -2px;
+  color: #0a0a0a;
 }
 
 .heroTitle em,
@@ -149,12 +140,13 @@ overflow-x: hidden;
 }
 
 .heroSubtitle {
-  max-width: 520px;
+ max-width: 520px;
   margin: 0 0 30px;
-  font-size: 16px;
-  line-height: 1.75;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  font-weight: 400;
+  color: rgba(9, 9, 9, 0.82);
 }
 
 .heroCta {

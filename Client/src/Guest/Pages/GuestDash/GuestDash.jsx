@@ -22,10 +22,9 @@ import style from "./GuestDash.module.css";
 
 /* ── PREMIUM IMAGE SET ── */
 const HERO_BG =
-  "https://images.openai.com/static-rsc-4/j5-PwvCtAg2KPxqcgQlJrvAmocYvBQL71XUVdnonRvfVnVVkw9HslzrOEHtDqzcKoMJrTPd_tEYg_3f2eF9aswvnICyYoeUNjstPucTOh4YrBRhkwGYEr1GF1PqxS_dPGPFk_tN2qJLaXIH8WwNU51E90bcmDBMGmr8z_vNUL9dB84CqntKGHAfg-5gXkAkz?purpose=fullsize"
+  "/herobg.png";
 const HERO_PORTRAIT =
- "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=90&dpr=2"
- 
+ "https://i.pinimg.com/1200x/72/75/be/7275be3bf1f0a6eb935f71e4dc10c6fc.jpg"
 const PRODUCT_IMAGES = [
   "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1400&q=90&dpr=2",
   "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1400&q=90&dpr=2",
@@ -36,15 +35,15 @@ const PRODUCT_IMAGES = [
 ];
 
 const INFLUENCER_IMAGES = [
-  "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=1200&q=90&dpr=2",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=90&dpr=2",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=90&dpr=2",
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=90&dpr=2",
+  "https://i.pinimg.com/736x/d2/6a/c1/d26ac1bb10de4b42c8dd724482fdcc52.jpg",
+  "https://i.pinimg.com/1200x/9f/04/a6/9f04a6472a63ff72ac3353e2a7c405bb.jpg",
+  "https://i.pinimg.com/736x/5f/59/51/5f5951c7c4654ddc7bc13eb3db5892b9.jpg",
+  "https://i.pinimg.com/736x/53/24/5b/53245b708ab5ab7e2f5db477fefa7fe0.jpg",
 ];
 
 const LIFESTYLE_IMAGES = [
-  "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=2200&q=90&dpr=2",
-  "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2200&q=90&dpr=2",
+  "https://i.pinimg.com/1200x/a4/c4/72/a4c4727c67c44c9a2ed08d660a880ab4.jpg",
+  "https://i.pinimg.com/1200x/7b/35/f2/7b35f2ea01efd5a665fa14b7c87c8b4d.jpg",
   "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=2200&q=90&dpr=2",
   "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=2200&q=90&dpr=2",
 ];
@@ -309,46 +308,33 @@ const GuestDash = () => {
       {/* Hero */}
       <section className={style.hero}>
         <div
-          className={style.heroBg}
-          style={{
-            backgroundImage: `url(${HERO_BG})`,
-            transform: `scale(1.08) translateY(${scrollY * 0.16}px)`,
-          }}
-        />
+  className={style.heroBg}
+  style={{
+    backgroundImage: `url(${HERO_BG})`,
+    transform: `scale(1.08) translateY(${scrollY * 0.16}px)`,
+  }}
+/>
         <div className={style.heroOverlay} />
         <div className={style.heroGlow} />
 
         <div className={style.heroInner}>
           <div className={style.heroLeft}>
-            <div className={style.heroBadge}>
-              <FlashOnIcon fontSize="inherit" />
-              <span>Trusted by creators, brands & shoppers</span>
-            </div>
+           <div className={style.heroBadge}>
+  <FlashOnIcon fontSize="inherit" />
+  <span>JOVIA</span>
+</div>
 
-            <h1 className={style.heroTitle}>
-              Where <em>Brands</em>
-              <br />
-              Meet <em>Influence</em>
-            </h1>
+<h1 className={style.heroTitle}>
+  Where Brands
+  <br />
+  Meet Influence
+</h1>
 
-            <p className={style.heroSubtitle}>
-              Shop authentic products promoted by India’s top creators.
-              Discover exclusive campaigns, real reviews, premium events and
-              creator-led experiences — all in one beautifully curated platform.
-            </p>
-
-            <div className={style.heroCta}>
-              <Link to="/registraction" className={style.ctaPrimary}>
-                <AppRegistrationIcon fontSize="small" />
-                Start Free
-              </Link>
-
-              <Link to="/login" className={style.ctaGhost}>
-                <LoginIcon fontSize="small" />
-                Sign In
-              </Link>
-            </div>
-
+<p className={style.heroSubtitle}>
+  Discover products through trusted creators,
+  explore authentic brand collaborations,
+  and shop directly from influencer content.
+</p>
             <div className={style.heroTrust}>
               <div className={style.trustAvatars}>
                 {INFLUENCER_IMAGES.map((img, i) => (
@@ -578,7 +564,7 @@ const GuestDash = () => {
               Join India’s fast-growing creator-commerce space and turn your
               influence into meaningful brand collaborations.
             </p>
-            <Link to="/registraction" className={style.ctaPrimary}>
+            <Link to="/influencerRegistration" className={style.ctaPrimary}>
               Join as Influencer <ArrowForwardIcon fontSize="small" />
             </Link>
           </div>
@@ -732,7 +718,7 @@ const GuestDash = () => {
                     </div>
                   )}
 
-                  <Link to="/login" className={style.eventBtn}>
+                  <Link to="/influencerRegistration" className={style.eventBtn}>
                     Register Now <ArrowForwardIcon fontSize="inherit" />
                   </Link>
                 </div>
